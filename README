@@ -18,9 +18,11 @@ fiverr    : https://www.fiverr.com/trimedit
 
 BEFORE USE: CHECK THE LIMITATIONS THIS THEME HAS, IF IT'S NOT FOR YOU THEN DON'T USE IT.
 
+
 If KDE settings giving a hard time switching, ensure or manually set:
     - /etc/sddm.conf.d/kde_settings.conf -- Current=SuperHotLogin  (under [Theme])
     - /etc/sddm.conf.d/theme.conf -- Current=SuperHotLogin (under [Theme])
+
 
 Special effects to know that occur:
     - Red pulsing (warning light) will appear when you reach your last login attempt
@@ -71,23 +73,12 @@ and for heavens sake not to do autologins for security reasons, even if it's for
 
 (Developer Notes)
 
-"Greeter Account":
-    You'll notice that after 10mins a timeout will occur locking the theme and show this "Greeter Account".
-    I have been able to resolve not seeing this "Greeter Account" by adding 'sddm' as a hidden user in
-    /etc/sddm.conf.d/hidden-users.conf -- i.e. HiddenUsers=sddm,[uname],...
-
-    As I use Wayland, I have not successfully found anything online or through GPT-5 a way to prevent the
-    lockout screen from occurring. However, doing the above, shows the lockscreen and on activity will show
-    the custom theme again.
-
-    On the other hand, X11 is meant to be more flexible, and according to GPT-5 you can disable the lockout/
-    screensaver by doing:
-
-	xset s off      // disables the X screensaver
-	xset s noblank  // prevents screen blanking
-	xset -dpms      // prevents Display Power Management Signaling
-
-    However, I'm sceptical that you don't need all these, so bring caution as I have not tested this way myself.
+"Greeter Account" (Wayland):
+    If you get a timeout after 10mins and see a Breeze theme that will point to a "Greeter Account", you can
+    fix this by going to:
+        /etc/sddm.conf.d/wayland.conf
+    and make sure the following is under [Wayland]
+        CompositorCommand=kwin_wayland --drm --no-lockscreen --no-global-shortcuts --locale1
 
 
 The following command was used to compile my .frag files:
