@@ -42,12 +42,12 @@ Features:
 Optional Changes:
     - Experiment around with the values in theme.conf to find preferences that fit you
     - If you want to add your own quotes, you don't need to be Mr. Robot to do it
-	1. Go to Components/QuoteModel.qml
-	2. Find the section with the list of ListElements {}
-	3. Modify the 'text' property inside them
-	4. Replace the property value, i.e. the text in the quotation marks
+        1. Go to Components/QuoteModel.qml
+	    2. Find the section with the list of ListElements {}
+	    3. Modify the 'text' property inside them
+	    4. Replace the property value, i.e. the text in the quotation marks
 
-	5. VOILA~ you changed the quote :)
+	    5. VOILA~ you changed the quote :)
 
 
 External packages required:
@@ -59,6 +59,8 @@ These packages are purely to enable the video background.
 Limitations:
     - Doesn't allow you to implicitly hibernate or sleep
     - Doesn't show battery life
+        |__ Could import it from org.kde.breeze.components, however, unsure if everyone downloading this 
+            would have these additional components on their system.
     - Doesn't have a virtual keyboard
     - Doesn't do autologins, or auto user recognition, keeps it old school
     - Doesn't show whether CAPS or NUM LOCK is active
