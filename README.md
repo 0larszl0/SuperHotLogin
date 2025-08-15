@@ -1,4 +1,6 @@
-![Demo Video](Preview/SuperHotPreview.gif)
+<p align="center">
+    <img src="Preview/SuperHotPreview.gif" />
+</p>
 
 ```
 +---------------------------------------------------------------------------------------------------------------+
