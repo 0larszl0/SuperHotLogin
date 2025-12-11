@@ -67,7 +67,7 @@ Item {
 	buttonWidth: 33
 	buttonHeight: 37
 
-	onReleased: sddm.shutdown()
+	onReleased: sddm.powerOff()
 
     }
     
